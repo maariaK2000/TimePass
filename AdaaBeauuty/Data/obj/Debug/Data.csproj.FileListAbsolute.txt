@@ -1,0 +1,12 @@
+C:\Users\Maaria Khan\source\repos\AdaaBeauuty\Data\bin\Debug\Data.dll.config
+C:\Users\Maaria Khan\source\repos\AdaaBeauuty\Data\bin\Debug\Data.dll
+C:\Users\Maaria Khan\source\repos\AdaaBeauuty\Data\bin\Debug\Data.pdb
+C:\Users\Maaria Khan\source\repos\AdaaBeauuty\Data\bin\Debug\EntityFramework.dll
+C:\Users\Maaria Khan\source\repos\AdaaBeauuty\Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Maaria Khan\source\repos\AdaaBeauuty\Data\bin\Debug\EntityFramework.xml
+C:\Users\Maaria Khan\source\repos\AdaaBeauuty\Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Maaria Khan\source\repos\AdaaBeauuty\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+C:\Users\Maaria Khan\source\repos\AdaaBeauuty\Data\obj\Debug\Data.csproj.CopyComplete
+C:\Users\Maaria Khan\source\repos\AdaaBeauuty\Data\obj\Debug\Data.dll
+C:\Users\Maaria Khan\source\repos\AdaaBeauuty\Data\obj\Debug\Data.pdb
+C:\Users\Maaria Khan\source\repos\AdaaBeauuty\Data\obj\Debug\Data.csproj.AssemblyReference.cache

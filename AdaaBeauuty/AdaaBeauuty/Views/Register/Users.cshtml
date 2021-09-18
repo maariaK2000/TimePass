@@ -1,0 +1,32 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Users";
+}
+
+<h2>ADAA USERS</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Register Id</th>
+            <th>User Name</th>
+            <th>Register Password</th>
+            <th>Register Contact</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var myreg in Model)
+        {
+            <tr>
+                <th scope="row">@myreg.RegisterId</th>
+                <td>@myreg.UserName</td>
+                <td>@myreg.RegisterPwd</td>
+                <td>@myreg.RegisterContact</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

@@ -1,0 +1,32 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "RegLoc";
+}
+
+<h2>RegLoc</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Location Id</th>
+            <th>Register Id</th>
+            <th>Email Id</th>
+            <th>User Location</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var regloc in Model)
+        {
+            <tr>
+                <th scope="row">@regloc.LocationId</th>
+                <td>@regloc.RegisterId</td>
+                <td>@regloc.EmailId</td>
+                <td>@regloc.UserLocation</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

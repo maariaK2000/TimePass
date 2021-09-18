@@ -1,0 +1,58 @@
+﻿@model AdaaBeauuty.Models.Product
+
+@{
+    ViewBag.Title = "GetProductById";
+}
+
+<h2>GetProductById</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PrdId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrdId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoryId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrdName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrdName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrdQuantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrdQuantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrdPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrdPrice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
