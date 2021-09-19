@@ -1,0 +1,48 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Registration Locations Details";
+}
+
+<h2>Location Details</h2>
+<table class="table mytable">
+    <thead>
+        <tr>
+            <th>Location Id</th>
+            <th>Register Id</th>
+            <th>Email Id</th>
+            <th>User Location</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var regloc in Model)
+        {
+            if (@regloc.LocationId % 2 == 0)
+            {
+                <tr class="even">
+                    <th scope="row">@regloc.LocationId</th>
+                    <td>@regloc.RegisterId</td>
+                    <td>@regloc.EmailId</td>
+                    <td>@regloc.UserLocation</td>
+                </tr>
+            }
+            else
+            {
+
+            }
+            {
+                <tr class="odd">
+                    <th scope="row">@regloc.LocationId</th>
+                    <td>@regloc.RegisterId</td>
+                    <td>@regloc.EmailId</td>
+                    <td>@regloc.UserLocation</td>
+                </tr>
+            }
+
+        }
+    </tbody>
+</table>
+
+
+

@@ -1,0 +1,42 @@
+﻿.form-horizontal {
+    background-color: #ffe4d1;
+    border-radius:2rem;
+}
+
+h4{
+    margin-left:9rem;
+    padding-top:3rem;
+}
+
+.txtbx {
+    background-color: #ffecde;
+    margin-bottom: 1.6rem;
+    border: none;
+    outline: none;
+}
+
+.txtlbl {
+    color: #5c4037;
+}
+
+.mybtn {
+    border-radius: 0.3rem;
+    border: none;
+    outline: none;
+    height: 4rem;
+    background-color: #a28176;
+    padding:2rem 3rem;
+    text-align:center;
+    color:#000;
+    text-transform:uppercase;
+    font-weight:bold;
+    letter-spacing:0.1rem;
+    padding-top:1.1rem;
+}
+
+.link-cls a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.6rem;
+    font-weight: bold;
+}

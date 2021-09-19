@@ -1,0 +1,57 @@
+﻿h2 {
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    color: #7d5f55;
+    margin: 3rem 0rem;
+    padding-top: 3rem;
+    letter-spacing: 0.3rem;
+    text-transform:uppercase;
+}
+
+    h2:before {
+        position: absolute;
+        content: "";
+        width: 18%;
+        height: 1.3rem;
+        background-color: #e4bfa4;
+        border-radius: 8rem;
+        bottom: 0.5rem;
+        z-index: -1;
+        top:5rem;
+        left: 37%;
+        transition: all 0.2s ease-in-out;
+        opacity: 1;
+    }
+
+.mytable {
+    background-color: #ffe4d1;
+    border-radius: 2rem;
+    border: 1px solid #dbc3b2;
+}
+
+    .mytable thead tr {
+        background-color: #dbc3b2;
+        border: 1px solid #dbc3b2;
+    }
+
+        .mytable thead tr th {
+            text-align: center;
+            border: 1px solid #dbc3b2;
+        }
+
+    .mytable tbody tr th {
+        text-align: center;
+    }
+
+    .mytable tbody tr td {
+        text-align: center;
+    }
+
+    .mytable tbody .even {
+        background-color: #f5e5da;
+    }
+
+    .mytable tbody .odd {
+        background-color: #ebd6c7;
+    }

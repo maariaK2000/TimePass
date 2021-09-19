@@ -1,0 +1,94 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #ffdbc2;
+}
+
+    body .mynav-main {
+        height: 6rem;
+        background-color: #f3cfb6;
+    }
+
+        body .mynav-main .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            body .mynav-main .container .mynav1 .mynav-brand {
+                color: #000000;
+                font-weight: bold;
+                font-size: 2.2rem;
+                margin-left: -25rem;
+                font-style: italic;
+                text-decoration:none;
+            }
+
+            body .mynav-main .container .ulclass {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top:1.5rem;
+            }
+
+            body .mynav-main .container .mynav2 ul li {
+                position: relative;
+                list-style: none;
+                margin-top: 0.7rem;
+                margin-left: 7rem;
+                font-size: 1.7rem;
+            }
+
+                body .mynav-main .container .mynav2 ul li .mylinks {
+                    text-decoration: none;
+                    color: #000000;
+                }
+
+                body .mynav-main .container .mynav2 ul li {
+                    color: #000000;
+                }
+
+                    body .mynav-main .container .mynav2 ul li::before {
+                        position: absolute;
+                        content: "";
+                        width: 80%;
+                        height: 0.6rem;
+                        background-color: #7d5f55;
+                        border-radius: 8rem;
+                        bottom: 0.5rem;
+                        z-index: -1;
+                        left: -30%;
+                        transition: all 0.2s ease-in-out;
+                        opacity: 0;
+                    }
+
+                    body .mynav-main .container .mynav2 ul li:hover::before {
+                        left: -8% !important;
+                        opacity: 1 !important;
+                    }
+
+                    body .mynav-main .container .mynav2 ul li:hover {
+                        font-weight: 500;
+                    }
+
+footer {
+    background-color: #f3c9a9;
+    height: 5rem;
+    margin:0;
+}
+
+footer p {
+    font-size: 1.7rem;
+    font-weight:500;
+    text-align:center;
+    margin-top:1.5rem;
+}

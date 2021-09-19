@@ -1,0 +1,31 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Adaa Products";
+}
+
+<h2>Adaa Products</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product Id</th>
+            <th>Category Id</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var prd in Model)
+        {
+        <tr>
+            <th scope="row">@prd.PrdId</th>
+            <td>@prd.CategoryId</td>
+            <td>@prd.PrdName</td>
+            <td>@prd.PrdPrice</td>
+            <td>@prd.PrdQuantity</td>
+        </tr>
+        }
+    </tbody>
+</table>
+

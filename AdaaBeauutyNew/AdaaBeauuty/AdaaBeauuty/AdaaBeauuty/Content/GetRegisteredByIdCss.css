@@ -1,0 +1,20 @@
+﻿.dl-horizontal {
+    background-color: #ffe4d1;
+    border-radius: 2rem;
+    font-size:1.6rem;
+    width:50rem;
+    margin-left:8rem;
+    height:20rem;
+    padding-top: 1.7rem;
+}
+
+dt, dd{
+    margin-bottom:1rem;
+}
+
+p a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.6rem;
+    font-weight: bold;
+}

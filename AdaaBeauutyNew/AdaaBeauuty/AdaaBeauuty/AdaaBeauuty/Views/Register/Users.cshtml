@@ -1,0 +1,45 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Users";
+}
+
+<h2>ADAA USERS</h2>
+
+<table class="table mytable">
+    <thead>
+        <tr>
+            <th>Register Id</th>
+            <th>User Name</th>
+            <th>Register Password</th>
+            <th>Register Contact</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var myreg in Model)
+        {
+            if (@myreg.RegisterId % 2 == 0)
+            {
+                <tr class="even">
+                    <th scope="row">@myreg.RegisterId</th>
+                    <td>@myreg.UserName</td>
+                    <td>@myreg.RegisterPwd</td>
+                    <td>@myreg.RegisterContact</td>
+                </tr>
+            }
+            else
+            {
+                <tr class="odd">
+                    <th scope="row">@myreg.RegisterId</th>
+                    <td>@myreg.UserName</td>
+                    <td>@myreg.RegisterPwd</td>
+                    <td>@myreg.RegisterContact</td>
+                </tr>
+            }
+
+        }
+    </tbody>
+</table>
+
+
+

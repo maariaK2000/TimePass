@@ -1,0 +1,37 @@
+﻿h3 {
+    text-align: center;
+    margin: 4rem 0;
+}
+
+table {
+    background-color: #ffe4d1;
+    border-radius: 2rem;
+    border: 1px solid #dbc3b2;
+}
+
+    table thead tr {
+        background-color: #dbc3b2;
+        border: 1px solid #dbc3b2;
+    }
+
+        table thead tr th {
+            text-align: center;
+            border: 1px solid #dbc3b2;
+        }
+
+    table tbody tr th {
+        text-align: center;
+    }
+
+    table tbody tr td {
+        text-align: center;
+    }
+
+
+    table tbody .even {
+        background-color: #f5e5da;
+    }
+
+    table tbody .odd {
+        background-color: #ebd6c7;
+    }

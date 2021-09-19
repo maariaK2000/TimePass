@@ -1,0 +1,50 @@
+﻿@model AdaaBeauuty.Models.RegLoc
+
+@{
+    ViewBag.Title = "GetRegLocById";
+}
+
+<h2>GetRegLocById</h2>
+
+<div>
+    <h4>RegLoc</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LocationId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocationId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RegisterId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegisterId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserLocation)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
