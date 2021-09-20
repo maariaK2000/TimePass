@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Data;
 using Data.Entities;
+using System.Data.Entity;
 using AdaaBeauuty.Models;
 
 namespace AdaaBeauuty.Controllers
@@ -126,8 +127,91 @@ namespace AdaaBeauuty.Controllers
             return data;
         }
 
+        //Edit Users
+        [HttpGet]
+        public ActionResult Edit(int id)
+        {
+            return View(new Adaa().myregisters.Where(r=>r.RegisterId==id).FirstOrDefault());
+        }
+        [HttpPost]
+        public ActionResult Edit(int id,myregister myreg)
+        {
+            try
+            {
+                using(Adaa db=new Adaa())
+                {
+                    db.Entry(myreg).State = EntityState.Modified;
+                    db.SaveChanges();
+                }
+                return RedirectToAction("showall");
+            }
+            catch
+            {
+                return View();
+            }
+        }
 
+        [HttpGet]
+        public ActionResult EditLoc(int id)
+        {
+            return View(new Adaa().registerlocations.Where(r => r.RegisterId == id).FirstOrDefault());
+        }
+        [HttpPost]
+        public ActionResult EditLoc(int id,registerlocation regloc)
+        {
+            try
+            {
+                using(Adaa db=new Adaa())
+                {
+                    db.Entry(regloc).State = EntityState.Modified;
+                    db.SaveChanges();
+                }
+                return RedirectToAction("showall");
 
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        //Login form
+        [HttpGet]
+        public ActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Login(Login log,myregister myreg)
+        {
+            var userDetails = new Adaa().myregisters.Where(r => r.UserName == log.UserName && r.RegisterPwd == log.RegisterPwd).FirstOrDefault();
+            if (userDetails == null)
+            {
+                log.LoginErrorMessage = "Sorry! U ain't an authenticated user";
+                return View("Login", log);
+
+            }
+            else
+            {
+                Session["regid"] = log.RegisterId;
+                Session["regname"] = log.UserName;
+                return RedirectToAction("Index","Home");
+            }
+
+        }
+
+        //Logout
+        public ActionResult Logout()
+        {
+            int regid = (int)Session["regid"];
+            if (regid != 0)
+            {
+                Session.Abandon();
+                return RedirectToAction("Home", "Login");
+
+            }
+            return View();
+        }
 
     }
 }

@@ -32,6 +32,17 @@
                     <li>@Html.ActionLink("Home", "Index", "Home", new { @class = "mylinks" })</li>
                     <li>@Html.ActionLink("About", "About", "Home", new { @class = "mylinks" })</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home", new { @class = "mylinks" })</li>
+                    <li>
+                        <p>Welcome @Session["regname"]</p>
+                        
+                    </li>
+                    <li>
+                        <button>
+                            @Html.ActionLink("Logout", "Login", "Register")
+                        </button>
+                        
+                    </li>
+                    
                 </ul>
             </div>
         </div>

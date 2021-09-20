@@ -1,0 +1,58 @@
+﻿@model AdaaBeauuty.Models.Login
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div id="login-div">
+        @using (Html.BeginForm(FormMethod.Post))
+        {
+            <table>
+                <tr>
+                    <td></td>
+                    <td style="text-decoration:underline">Adaa Beauty</td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.UserName)
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.UserName)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(model => model.RegisterPwd)
+                    </td>
+                    <td>
+                        @Html.EditorFor(model => model.RegisterPwd)
+                    </td>
+                </tr>
+                <tr>
+                    <td column="2">
+                        <label class="field-validation-error">@Html.DisplayFor(model => model.LoginErrorMessage)</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" name="Login" value="Login" />
+                        <input type="reset" name="Reset" value="Reset" />
+                    </td>
+
+                </tr>
+            </table>
+        }
+    </div>
+
+
+
+</body>
+</html>
