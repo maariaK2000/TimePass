@@ -1,0 +1,135 @@
+﻿.about-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50rem;
+    background-image: linear-gradient(to right top, #000000, #121212, #1d1d1d, #282828, #333333);
+    position: relative;
+    overflow: hidden;
+}
+
+.div-left {
+    width: 65%;
+    height: 100%;
+}
+
+    .div-left :before {
+        position: absolute;
+        content: '';
+        width: 80px;
+        height: 80px;
+        background-color: #d27773;
+        top: 0rem;
+        right: -5rem;
+        opacity: 0.2;
+    }
+
+    .div-left ::after {
+        position: absolute;
+        content: '';
+        width: 95px;
+        height: 95px;
+        background-color: #000;
+        top: 4rem;
+        right: -3rem;
+        opacity: 0.2;
+    }
+
+.div-right {
+    width: 35%;
+    height: 100%;
+    position: relative;
+}
+
+    .div-right #i1, .div-right #i2, .div-right #i3 {
+        position: absolute;
+        width: 100px;
+        height: 200px;
+    }
+
+    .div-right #i1 {
+        top: 20px;
+        left: 20px;
+    }
+
+    .div-right #i2 {
+        top: 50px;
+        right: 20px;
+    }
+
+    .div-right #i3 {
+        top: 60px;
+    }
+
+.div-left .para {
+    margin-top: 7rem;
+    margin-left: 6rem;
+    border-left: 8px solid #d27773;
+    outline: 1px solid #000;
+    padding-top: 10px;
+    border-bottom: 5px solid #333;
+    padding-left: 33px;
+    width: 450px;
+}
+
+    .div-left .para p {
+        color: #ccc;
+        font-size: 2.2rem;
+        letter-spacing: 0.1rem;
+    }
+
+        .div-left .para p:nth-child(3) {
+            color: #d27773;
+            font-size: 3.6rem;
+            letter-spacing: 0.1rem;
+            width: 400px;
+            margin-top: 25px;
+            position: relative;
+        }
+
+            .div-left .para p:nth-child(3):before {
+                position: absolute;
+                content: '';
+                width: 80px;
+                height: 80px;
+                background-color: #d27773;
+                top: 23rem;
+                right: 4rem;
+                opacity: 0.4;
+            }
+
+            .div-left .para p:nth-child(3)::after {
+                position: absolute;
+                content: '';
+                width: 95px;
+                height: 95px;
+                background-color: #000;
+                top: 18rem;
+                right: 10rem;
+                opacity: 0.5;
+            }
+
+section .products-div .div1 .div1-left .div1-up .dr {
+    position: relative;
+}
+
+.div1 .div1-left .div1-up .dr:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    top: 0;
+    left: 0;
+    opacity: 0.1;
+}
+
+.exp {
+    width: 100%;
+    background-color: red;
+}
+
+    .exp .exp-img {
+        width: 100%;
+    }

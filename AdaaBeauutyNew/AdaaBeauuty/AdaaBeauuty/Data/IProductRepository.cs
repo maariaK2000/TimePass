@@ -15,5 +15,7 @@ namespace Data
         //void UpdateProduct(int id);
         void DeleteProduct(int id);
         void Save();
+
+        product GetToners();
     }
 }

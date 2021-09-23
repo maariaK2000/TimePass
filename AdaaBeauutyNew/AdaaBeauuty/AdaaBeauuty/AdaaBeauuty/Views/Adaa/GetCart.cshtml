@@ -1,0 +1,50 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "GetCart";
+    var j = Model.Count;
+}
+<h2>GetCart</h2>
+<table class="table mytable">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Quantity</th>
+            <th>Remove Item</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(var i= 0;i< j;i++)
+        {
+            <tr class="even">
+                <th scope="row">@Model[i].PrdName</th>
+                <td>@Model[i].PrdPrice</td>
+                <td>@ViewBag.quantity[i]</td>
+                <td><input type="button" value="Remove" onclick="ButtonClick(1,@Model[i].PrdId)"></td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+<h1>Total is @ViewBag.totalprice</h1>
+<script>
+    function ButtonClick(regid,prdid) {
+        $.ajax({
+            url: "/Adaa/DeleteCart",
+            method: "POST",
+            data: { 'id': regid ,'pid':prdid},
+            success: function (data) {
+                alert("Item successfully removed from cart")
+                location.reload();
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        })
+    }
+    
+</script>
+
+
+

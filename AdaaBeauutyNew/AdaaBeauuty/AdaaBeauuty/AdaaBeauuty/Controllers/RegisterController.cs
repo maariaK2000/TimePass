@@ -7,6 +7,7 @@ using Data;
 using Data.Entities;
 using System.Data.Entity;
 using AdaaBeauuty.Models;
+using System.Web.Security;
 
 namespace AdaaBeauuty.Controllers
 {
@@ -55,7 +56,7 @@ namespace AdaaBeauuty.Controllers
         {
             reglocrepo.DeleteRegLoc(id);
             regrepo.DeleteRegistered(id);
-            return "1 user delete";
+            return "1 user deleted successfully";
         }
         // GET: Register
         [HttpGet]
@@ -73,7 +74,7 @@ namespace AdaaBeauuty.Controllers
                 regrepo.AddRegistered(RegMapper.MapReg1(regview));
                 int Idt = new Adaa().myregisters.Max(u => u.RegisterId);
                 reglocrepo.AddRegLoc(RegMapper.MapReg2(regview, Idt));
-                return RedirectToAction("showall");
+                return RedirectToAction("Login");
             }
             return View(regview);
 
@@ -163,6 +164,7 @@ namespace AdaaBeauuty.Controllers
             {
                 using(Adaa db=new Adaa())
                 {
+                    regloc.RegisterId = id;
                     db.Entry(regloc).State = EntityState.Modified;
                     db.SaveChanges();
                 }
@@ -173,6 +175,10 @@ namespace AdaaBeauuty.Controllers
             {
                 return View();
             }
+        }
+        public ActionResult MyAdmin()
+        {
+            return View();
         }
 
         //Login form
@@ -189,15 +195,38 @@ namespace AdaaBeauuty.Controllers
             {
                 log.LoginErrorMessage = "Sorry! U ain't an authenticated user";
                 return View("Login", log);
-
             }
             else
             {
-                Session["regid"] = log.RegisterId;
+                
+                Session["regid"] = userDetails.RegisterId;
                 Session["regname"] = log.UserName;
+                //TempData["id"] = Session["regid"];
+                FormsAuthentication.SetAuthCookie(log.UserName, false);
                 return RedirectToAction("Index","Home");
             }
 
+        }
+        //Newpassword
+        [HttpGet]
+        public ActionResult NewPassword()
+        {
+            return View();
+
+        }
+        [HttpPost]
+        public ActionResult NewPassword(NewPassword npwd)
+        {
+            if (ModelState.IsValid)
+            {
+                regrepo.NewPassword(npwd.RegisterContact, npwd.RegisterPwd);
+                return RedirectToAction("Login");
+            }
+            else
+            {
+                return View();
+            }
+            
         }
 
         //Logout

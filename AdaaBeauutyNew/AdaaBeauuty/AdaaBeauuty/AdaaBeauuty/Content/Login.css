@@ -1,0 +1,88 @@
+﻿body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0;
+    background-color: #f4c7aa;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    //border: 2px solid red;
+    height: 35vw;
+}
+
+.img-div {
+    //border: 2px solid blue;
+    width: 50%;
+    height: 80%;
+}
+
+    .img-div img {
+        width: 100%;
+        height: 100%;
+    }
+
+#login-div {
+    //border: 2px solid red;
+    width: 30%;
+    //background-color: rgba(128, 109, 103,0.4);
+    //background-color: rgba(44, 62, 80,0.7);
+    //background-color: #c7a194;
+    background-image: linear-gradient(to left top, #543b32, #71554b, #907166, #b08e82, #d1ac9f);
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 120px;
+    height: 100%;
+}
+
+    #login-div table {
+        //border: 2px solid red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 250px;
+        margin-top: 55px;
+        margin-left: 10px;
+    }
+
+        #login-div table .tab-name {
+            color: #1a0f0b;
+            font-weight: bold;
+            font-size: 26px;
+        }
+
+        #login-div table tr {
+            //border: 2px solid red;
+        }
+
+            #login-div table tr td {
+                //border: 2px solid red;
+            }
+
+        #login-div table td label {
+            font-size: 16px;
+            //margin-bottom: 30px;
+        }
+
+        #login-div table td input {
+            border: none;
+            outline: none;
+            border-radius: 0.2rem;
+            height: 25px;
+            background-color: #c3a297;
+            margin-top: 16px;
+        }
+
+        #login-div table td .btn {
+            background-color: #543b32;
+            color: #fff;
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-top: 40px;
+            margin-right: 20px;
+            padding: 5px 7px;
+        }

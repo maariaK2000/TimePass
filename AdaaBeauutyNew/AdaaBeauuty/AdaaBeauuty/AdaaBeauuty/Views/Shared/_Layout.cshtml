@@ -7,7 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     @Styles.Render("~/Content/showall.css")
+    @Styles.Render("~/Content/MyAbout.css")
+    @Styles.Render("~/Content/Admin.css")
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/LayoutPageCss.css")
     @Styles.Render("~/Content/AllUsersCss.css")
@@ -31,18 +34,27 @@
                 <ul class="ulclass">
                     <li>@Html.ActionLink("Home", "Index", "Home", new { @class = "mylinks" })</li>
                     <li>@Html.ActionLink("About", "About", "Home", new { @class = "mylinks" })</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { @class = "mylinks" })</li>
                     <li>
                         <p>Welcome @Session["regname"]</p>
-                        
+
+                    </li>
+                    <li>
+                        @Html.ActionLink("SkinCare", "SkinCare", "Adaa")
                     </li>
                     <li>
                         <button>
                             @Html.ActionLink("Logout", "Login", "Register")
                         </button>
-                        
+
                     </li>
-                    
+                    <li>
+                        @Html.ActionLink("Order History", "GetHistoryCart", "Adaa")
+
+                    </li>
+                    <li>
+                        <a href="~/Adaa/GetCart"><i class="fa fa-shopping-cart" style="font-size:34px;color:#7d5f55"></i></a>
+                    </li>
+                  
                 </ul>
             </div>
         </div>

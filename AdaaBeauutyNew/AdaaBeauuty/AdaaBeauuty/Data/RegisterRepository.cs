@@ -50,6 +50,18 @@ namespace Data
                 throw new ArgumentException("Id cannot be less than 0");
             }
         }
+        //getadmins
+        public IEnumerable<myadmin> GetMyAdmins()
+        {
+            return db.myadmins.Where(i => i.AdminId>0 && i.AdminId<5).ToList();
+        }
+        public void NewPassword(string contact,string pwd)
+        {
+            var myreg = db.myregisters.Where(r => r.RegisterContact==contact).FirstOrDefault();
+            myreg.RegisterPwd = pwd;
+            Save();
+
+        }
 
         public IEnumerable<myregister> GetRegistered()
         {

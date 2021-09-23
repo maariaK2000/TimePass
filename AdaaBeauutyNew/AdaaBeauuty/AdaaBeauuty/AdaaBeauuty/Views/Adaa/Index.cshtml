@@ -5,6 +5,8 @@
 }
 
 <h2>Adaa Products</h2>
+<h4>@Html.ActionLink("Add new Product", "MyProductForm")</h4>
+<h4>@Html.ActionLink("Edit Product", "EditForm")</h4>
 <table class="table">
     <thead>
         <tr>
@@ -18,13 +20,13 @@
     <tbody>
         @foreach (var prd in Model)
         {
-        <tr>
-            <th scope="row">@prd.PrdId</th>
-            <td>@prd.CategoryId</td>
-            <td>@prd.PrdName</td>
-            <td>@prd.PrdPrice</td>
-            <td>@prd.PrdQuantity</td>
-        </tr>
+            <tr>
+                <th scope="row">@prd.PrdId</th>
+                <td>@prd.CategoryId</td>
+                <td>@prd.PrdName</td>
+                <td>@prd.PrdPrice</td>
+                <td>@prd.PrdQuantity</td>
+            </tr>
         }
     </tbody>
 </table>

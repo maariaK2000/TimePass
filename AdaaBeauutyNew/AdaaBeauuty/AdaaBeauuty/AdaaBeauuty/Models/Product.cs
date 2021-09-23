@@ -12,6 +12,8 @@ namespace AdaaBeauuty.Models
         [DisplayName("Product Id")]
         public int PrdId { get; set; }
 
+        public int RegisterId { get; set; }
+
         [DisplayName("Category Id")]
         public int CategoryId { get; set; }
         [DisplayName("Product Name")]

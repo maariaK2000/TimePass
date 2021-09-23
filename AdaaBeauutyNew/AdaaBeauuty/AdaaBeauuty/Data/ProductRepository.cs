@@ -31,6 +31,15 @@ namespace Data
             else
                 throw new ArgumentException("Product is not found");
         }
+        //deletfromcart
+
+        public void DeleteCart(int id,int pid)
+        {
+            var cart = db.customercarts.Where(c => c.RegisterId == id && c.PrdId==pid).FirstOrDefault();
+            db.customercarts.Remove(cart);
+
+            Save();
+        }
 
         public product GetProductById(int id)
         {
@@ -58,6 +67,15 @@ namespace Data
                     .ToList();
         }
 
+        //GetToners
+        public product GetToners()
+        {
+            return db.products
+                     .Include("category")
+                     .Where(p => p.PrdId==26)
+                     .FirstOrDefault();
+        }
+
         /*public void UpdateProduct(int id)
         {
             var prd = db.products.Find(id);
@@ -70,6 +88,59 @@ namespace Data
                 throw new ArgumentException("Product is not found");
 
         }*/
+
+        public void UpdateQuantity(int id,int nqnty)
+        {
+            var prd = db.products.Where(p=>p.PrdId==id).FirstOrDefault();
+            prd.PrdQuantity = nqnty;
+            Save();
+
+        }
+        
+        public void AddToCart(customercart cart)
+        {
+            db.customercarts.Add(cart);
+            Save();
+        }
+        public void AddToHistoryCart(historycart cart)
+        {
+            db.historycarts.Add(cart);
+            Save();
+        }
+        public IEnumerable<customercart> GetCart()
+        {
+            return db.customercarts
+                .Include("myregister")
+                .Include("product")
+                .ToList();
+
+        }
+
+        public IEnumerable<product> GetCartDetails(int regid)
+        {
+            var li = new List<product>();
+            var product = db.customercarts
+                .Where(c => c.RegisterId == regid)
+                .ToList();
+            foreach(var p in product)
+            {
+                li.Add(db.products.Where(m => m.PrdId == p.PrdId).FirstOrDefault());
+            }
+            return li;
+        }
+
+        public IEnumerable<product> GetHistoryCartDetails(int regid)
+        {
+            var li = new List<product>();
+            var product = db.historycarts
+                .Where(c => c.RegisterId == regid)
+                .ToList();
+            foreach (var p in product)
+            {
+                li.Add(db.products.Where(m => m.PrdId == p.PrdId).FirstOrDefault());
+            }
+            return li;
+        }
         public void Save()
         {
             db.SaveChanges();

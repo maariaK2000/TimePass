@@ -134,9 +134,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Cart.cs" />
+    <Compile Include="Models\CartDetails.cs" />
+    <Compile Include="Models\CartView.cs" />
+    <Compile Include="Models\HistoryCart.cs" />
+    <Compile Include="Models\HistoryCartView.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Mapper.cs" />
+    <Compile Include="Models\NewPassword.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductForm.cs" />
     <Compile Include="Models\Register.cs" />
     <Compile Include="Models\RegisterCombined.cs" />
     <Compile Include="Models\RegisterViewModel.cs" />
@@ -145,6 +152,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Admin.css" />
     <Content Include="Content\AllUsersCss.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -152,11 +160,37 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\GetRegisteredByIdCss.css" />
     <Content Include="Content\LayoutPageCss.css" />
+    <Content Include="Content\Login.css" />
+    <Content Include="Content\MyAbout.css" />
     <Content Include="Content\MyFormCss.css" />
     <Content Include="Content\showall.css" />
     <Content Include="Content\UsersLocCss.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\1.PNG" />
+    <Content Include="fonts\2.PNG" />
+    <Content Include="fonts\3.PNG" />
+    <Content Include="fonts\cleanse1.png" />
+    <Content Include="fonts\forestessential.jpeg" />
+    <Content Include="fonts\forgotpwd.jpg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\happytoner.jpeg" />
+    <Content Include="fonts\img1.jpeg" />
+    <Content Include="fonts\img2.jpeg" />
+    <Content Include="fonts\img3.jpeg" />
+    <Content Include="fonts\img4.jpeg" />
+    <Content Include="fonts\img5.jpeg" />
+    <Content Include="fonts\img6.jpeg" />
+    <Content Include="fonts\lakmetoner.jpeg" />
+    <Content Include="fonts\mask1.png" />
+    <Content Include="fonts\model2.jpg" />
+    <Content Include="fonts\moist1.png" />
+    <Content Include="fonts\mymodel.jpg" />
+    <Content Include="fonts\pixiglowtonic.jpeg" />
+    <Content Include="fonts\processed.jpeg" />
+    <Content Include="fonts\sk1.jpg" />
+    <Content Include="fonts\teatree.jpeg" />
+    <Content Include="fonts\tone1.png" />
+    <Content Include="fonts\vitaminc.jpeg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
@@ -197,6 +231,14 @@
     <Content Include="Views\Register\Edit.cshtml" />
     <Content Include="Views\Register\EditLoc.cshtml" />
     <Content Include="Views\Register\Login.cshtml" />
+    <Content Include="Views\Adaa\SkinCare.cshtml" />
+    <Content Include="Views\Adaa\GetToners.cshtml" />
+    <Content Include="Views\Adaa\GetCart.cshtml" />
+    <Content Include="Views\Adaa\MyProductForm.cshtml" />
+    <Content Include="Views\Adaa\EditForm.cshtml" />
+    <Content Include="Views\Register\NewPassword.cshtml" />
+    <Content Include="Views\Adaa\GetHistoryCart.cshtml" />
+    <Content Include="Views\Register\MyAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,30 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "GetHistoryCart";
+    var j = Model.Count;
+}
+
+<h2>GetHistoryCart</h2>
+
+<table class="table mytable">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (var i = 0; i < j; i++)
+        {
+            <tr class="even">
+                <th scope="row">@Model[i].PrdName</th>
+                <td>@Model[i].PrdPrice</td>
+                <td>@ViewBag.quantity[i]</td>
+            </tr>
+
+        }
+    </tbody>
+</table>
+

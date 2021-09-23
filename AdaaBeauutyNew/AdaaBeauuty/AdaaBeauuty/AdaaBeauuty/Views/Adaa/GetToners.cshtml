@@ -1,0 +1,142 @@
+﻿@model IEnumerable<AdaaBeauuty.Models.Product>
+@{
+    ViewBag.Title = "GetsAllToners";
+}
+
+<h2>Our List of Toners</h2>
+
+<div class="toner" style="display:flex; justify-content:center;align-items:center;height:550px">
+    @foreach (var prod in Model)
+    {
+        if (prod.PrdId == 26 || prod.PrdId == 27 || prod.PrdId == 28)
+        {
+            <div class="card" style="width: 30rem; margin: 0px 35px; box-shadow: 0px 6px 12px 2px rgba(202,116,77,1); border-radius: 8px">
+                @if (prod.PrdId == 26)
+                {
+                    <img src="~/fonts/forestessential.jpeg" style="width: 100%; border-radius: 8px" />
+                }
+                else if (prod.PrdId == 27)
+                {
+                    <img src="~/fonts/teatree.jpeg" style="width: 100%; border-radius: 8px" />
+                }
+                else if (prod.PrdId == 28)
+                {
+                    <img src="~/fonts/vitaminc.jpeg" style="width: 100%; border-radius: 8px" />
+                }
+                @if (prod.PrdId % 2 == 0)
+                {
+                    <div class="toner-div1">
+                        <div class="card-body" style="display: flex; justify-content: center; align-items: center;flex-direction:column">
+                            <label class="card-title" style="font-size:17px;margin-top:10px">@prod.PrdName</label>
+                            <label class="card-text" style="font-size:23px">Rs. @prod.PrdPrice</label>
+                            <label class="card-text" style="font-size: 18px; font-weight: 500">Quantity:</label>
+                            <input type="text" class="qnty" style="height: 30px; border: none; outline: none; background-color: #dab194; width: 200px; margin-bottom: 12px" />
+                            <button id="btn" class="mybtn" onclick="btn_clicked(@prod.PrdId)" style="margin-bottom:20px">ADD TO CART</button>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="toner-div2">
+                        <div class="card-body" style="display: flex; justify-content: center; align-items: center; flex-direction: column">
+                            <label class="card-title" style="font-size: 17px; margin-top: 10px">@prod.PrdName</label>
+                            <label class="card-text" style="font-size:23px">Rs. @prod.PrdPrice</label>
+                            <label class="card-text" style="font-size: 18px; font-weight: 500">Quantity:</label>
+                            <input type="text" class="qnty" style="height: 30px; border: none; outline: none; background-color: #dab194; width: 200px; margin-bottom: 12px" />
+                            <button id="btn" class="mybtn" onclick="btn_clicked(@prod.PrdId)" style="margin-bottom:20px">ADD TO CART</button>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    }
+</div>
+
+
+<div class="toner" style="display:flex; justify-content:center;align-items:center;height:550px">
+    @foreach (var prod in Model)
+    {
+        if (prod.PrdId == 29 || prod.PrdId == 30 || prod.PrdId == 31)
+        {
+            <div class="card" style="width: 30rem; margin: 0px 35px; box-shadow: 0px 6px 12px 2px rgba(202,116,77,1);border-radius:8px">
+                @if (prod.PrdId == 29)
+                {
+                    <img src="~/fonts/pixiglowtonic.jpeg" style="width: 100%; border-radius: 8px" />
+                }
+                else if (prod.PrdId == 30)
+                {
+                    <img src="~/fonts/lakmetoner.jpeg" style="width: 100%; border-radius: 8px" />
+                }
+                else if (prod.PrdId == 31)
+                {
+                    <img src="~/fonts/happytoner.jpeg" style="width: 100%; border-radius: 8px" />
+                }
+                @if (prod.PrdId % 2 == 0)
+                {
+                    <div class="toner-div1">
+                        <div class="card-body" style="display: flex; justify-content: center; align-items: center; flex-direction: column">
+                            <label class="card-title" style="font-size: 17px; margin-top: 10px">@prod.PrdName</label>
+                            <label class="card-text" style="font-size:23px">Rs. @prod.PrdPrice</label>
+                            <label class="card-text" style="font-size: 18px; font-weight: 500">Quantity:</label>
+                            <input type="text" class="qnty" style="height: 30px; border: none; outline: none; background-color: #dab194;width:200px;margin-bottom:12px" />
+                            <button id="btn" class="mybtn" onclick="btn_clicked(@prod.PrdId)" style="margin-bottom:20px">ADD TO CART</button>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="toner-div2">
+                        <div class="card-body" style="display: flex; justify-content: center; align-items: center; flex-direction: column">
+                            <label class="card-title" style="font-size: 17px; margin-top: 10px">@prod.PrdName</label>
+                            <label class="card-text" style="font-size:23px">Rs. @prod.PrdPrice</label>
+                            <label class="card-text" style="font-size:18px;font-weight:500">Quantity:</label>
+                            <input type="text" class="qnty" style="height: 30px; border: none; outline: none; background-color: #dab194; width: 200px; margin-bottom: 12px" />
+                            <button id="btn" class="mybtn" onclick="btn_clicked(@prod.PrdId)" style="margin-bottom:20px">ADD TO CART</button>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    }
+</div>
+<script>
+
+    function btn_clicked(id) {
+        var regid = 1;
+        var prdid = parseInt(id);
+        var qt;
+        var quantity = $(".qnty").map(function () {
+            if ($(this).val()) {
+                //console.log($(this).val() );
+                qt = $(this).val();
+                return $(this).val();
+            }
+        });
+        //console.log(quantity);
+        //var quantity = parseInt($("#qnty").val());
+
+        console.log(regid);
+        var obj = {
+            RegisterId: regid,
+            PrdId: prdid,
+            PrdQuantity: qt
+        }
+        Cart(obj);
+    }
+
+    function Cart(obj) {
+        $.ajax({
+            url: "/Adaa/AddToCart",
+            method: "POST",
+            data: obj,
+            success: function (data) {
+                alert("Item successfully added in cart")
+                location.reload();
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        })
+    }
+
+</script>
