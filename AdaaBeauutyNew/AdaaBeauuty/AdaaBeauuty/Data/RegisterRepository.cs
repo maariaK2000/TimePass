@@ -53,11 +53,11 @@ namespace Data
         //getadmins
         public IEnumerable<myadmin> GetMyAdmins()
         {
-            return db.myadmins.Where(i => i.AdminId>0 && i.AdminId<5).ToList();
+            return db.myadmins.Where(i => i.AdminId > 0 && i.AdminId < 5).ToList();
         }
-        public void NewPassword(string contact,string pwd)
+        public void NewPassword(string contact, string pwd)
         {
-            var myreg = db.myregisters.Where(r => r.RegisterContact==contact).FirstOrDefault();
+            var myreg = db.myregisters.Where(r => r.RegisterContact == contact).FirstOrDefault();
             myreg.RegisterPwd = pwd;
             Save();
 
@@ -68,6 +68,13 @@ namespace Data
             return db.myregisters
                     .ToList();
         }
+
+        public IEnumerable<myregister> GetRegisteredByUsername(string search)
+        {
+            return db.myregisters.Where(x => x.UserName.StartsWith(search) || search==null)
+                    .ToList();
+        }
+
 
         public void UpdateProduct(int id)
         {

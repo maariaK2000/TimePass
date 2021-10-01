@@ -24,17 +24,36 @@ namespace AdaaBeauuty.Controllers
         }
 
         // GET: Adaa
-        public ActionResult Users()
+        public ActionResult Users(string searchby, string search)
         {
-            //string str = "";
-            var myreg = regrepo.GetRegistered();
-            var data = new List<AdaaBeauuty.Models.Register>();
-            foreach (var r in myreg)
+            if(searchby == "registerid")
             {
-                //str += p.PrdName + " ";
-                data.Add(RegMapper.Map(r));
+                var myreg = regrepo.GetRegisteredById(Convert.ToInt32(search));
+                var data = new List<AdaaBeauuty.Models.Register>();
+                if(myreg != null)
+                {
+                    data.Add(RegMapper.Map(myreg));
+                    return View(data);
+                }
+                else
+                {
+                    return View(data);
+                }
+                
             }
-            return View(data);
+            else
+            {
+                var myreg = regrepo.GetRegisteredByUsername(search);  
+                var data = new List<AdaaBeauuty.Models.Register>();
+                foreach (var r in myreg)
+                {
+                    //str += p.PrdName + " ";
+                    data.Add(RegMapper.Map(r));
+                }
+                return View(data);
+            }
+            //string str = "";
+            
         }
 
         public ActionResult GetRegisteredById(int id)
