@@ -1,0 +1,15 @@
+C:\Users\Maaria Khan\source\repos\Hungary\Hungary\bin\Debug\net5.0\Hungary.exe
+C:\Users\Maaria Khan\source\repos\Hungary\Hungary\bin\Debug\net5.0\Hungary.deps.json
+C:\Users\Maaria Khan\source\repos\Hungary\Hungary\bin\Debug\net5.0\Hungary.runtimeconfig.json
+C:\Users\Maaria Khan\source\repos\Hungary\Hungary\bin\Debug\net5.0\Hungary.runtimeconfig.dev.json
+C:\Users\Maaria Khan\source\repos\Hungary\Hungary\bin\Debug\net5.0\Hungary.dll
+C:\Users\Maaria Khan\source\repos\Hungary\Hungary\bin\Debug\net5.0\ref\Hungary.dll
+C:\Users\Maaria Khan\source\repos\Hungary\Hungary\bin\Debug\net5.0\Hungary.pdb
+C:\Users\Maaria Khan\source\repos\Hungary\Hungary\obj\Debug\net5.0\Hungary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Maaria Khan\source\repos\Hungary\Hungary\obj\Debug\net5.0\Hungary.AssemblyInfoInputs.cache
+C:\Users\Maaria Khan\source\repos\Hungary\Hungary\obj\Debug\net5.0\Hungary.AssemblyInfo.cs
+C:\Users\Maaria Khan\source\repos\Hungary\Hungary\obj\Debug\net5.0\Hungary.csproj.CoreCompileInputs.cache
+C:\Users\Maaria Khan\source\repos\Hungary\Hungary\obj\Debug\net5.0\Hungary.dll
+C:\Users\Maaria Khan\source\repos\Hungary\Hungary\obj\Debug\net5.0\ref\Hungary.dll
+C:\Users\Maaria Khan\source\repos\Hungary\Hungary\obj\Debug\net5.0\Hungary.pdb
+C:\Users\Maaria Khan\source\repos\Hungary\Hungary\obj\Debug\net5.0\Hungary.genruntimeconfig.cache
